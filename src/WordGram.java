@@ -61,7 +61,11 @@ public class WordGram {
 	public boolean equals(Object o) {
 		if (!(o instanceof WordGram) || o == null) {
 			return false;
-		} else {
+		}
+		else if (!(myWords.length == ((WordGram) o).myWords.length)) {
+			return false;
+		}
+		else {
 			for (int g = 0; g < myWords.length; g++) {
 				if (!(myWords[g].equals(((WordGram) o).wordAt(g)))) {
 					return false;
